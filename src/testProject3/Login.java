@@ -115,7 +115,7 @@ public class Login {
 		});
 		btnLogin.setBounds(230, 224, 117, 25);
 		panel.add(btnLogin);
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 800, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
