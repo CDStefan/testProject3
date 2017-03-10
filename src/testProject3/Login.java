@@ -93,6 +93,9 @@ public class Login {
 					}
 					if(count == 1) {
 						JOptionPane.showMessageDialog(null, "User name and password is correct");
+						PanelOptions options = new PanelOptions();
+						frame.getContentPane().add(options, BorderLayout.CENTER);
+						options.setLayout(null);
 					} else if (count < 1){
 						JOptionPane.showMessageDialog(null, "Duplicate user and password");
 					} else {
