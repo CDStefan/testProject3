@@ -76,6 +76,8 @@ public class Login {
 		lblPassword.setBounds(89, 144, 123, 19);
 		panel.add(lblPassword);
 		
+		PanelOptions options = new PanelOptions();
+		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent args0) {
@@ -94,9 +96,8 @@ public class Login {
 					if(count == 1) {
 						JOptionPane.showMessageDialog(null, "User name and password is correct");
 						panel.setVisible(false);
-						PanelOptions options = new PanelOptions();
 						frame.getContentPane().add(options, BorderLayout.CENTER);
-						options.setLayout(null);
+						options.setVisible(true);
 					} else if (count < 1){
 						JOptionPane.showMessageDialog(null, "Duplicate user and password");
 					} else {
