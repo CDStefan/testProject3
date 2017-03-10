@@ -18,6 +18,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import net.miginfocom.swing.MigLayout;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
 public class PanelOptions extends JPanel {
 
@@ -25,19 +28,27 @@ public class PanelOptions extends JPanel {
 	 * Create the panel.
 	 */
 	public PanelOptions() {
-		setLayout(new GridLayout(0, 4, 0, 0));
+		setLayout(new GridLayout(4, 0, 0, 0));
 		
-		JButton btnNewButton_3 = new JButton("New button");
-		add(btnNewButton_3);
+		JButton btnNewButton_receptie = new JButton("RECEPTIE");
+		btnNewButton_receptie.setForeground(Color.RED);
+		btnNewButton_receptie.setFont(new Font("Arial", Font.BOLD, 14));
+		add(btnNewButton_receptie);
 		
-		JButton btnNewButton_2 = new JButton("New button");
-		add(btnNewButton_2);
+		JButton btnNewButton_cabinete = new JButton("CABINETE");
+		btnNewButton_cabinete.setForeground(Color.RED);
+		btnNewButton_cabinete.setFont(new Font("Arial", Font.BOLD, 14));
+		add(btnNewButton_cabinete);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		add(btnNewButton_1);
+		JButton btnNewButton_LabAnalize = new JButton("LABORATOR ANALIZE");
+		btnNewButton_LabAnalize.setForeground(Color.RED);
+		btnNewButton_LabAnalize.setFont(new Font("Arial", Font.BOLD, 14));
+		add(btnNewButton_LabAnalize);
 		
-		JButton btnNewButton = new JButton("New button");
-		add(btnNewButton);
+		JButton btnNewButton_LabRadiologie = new JButton("LABORATOR RADIOLOGIE");
+		btnNewButton_LabRadiologie.setForeground(Color.RED);
+		btnNewButton_LabRadiologie.setFont(new Font("Arial", Font.BOLD, 14));
+		add(btnNewButton_LabRadiologie);
 		
 	}
 		
