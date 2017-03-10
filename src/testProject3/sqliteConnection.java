@@ -8,7 +8,6 @@ public class sqliteConnection {
 	public static Connection dbConnector() {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection con = DriverManager.getConnection("jdbc:sqlite:/home/dom/workspace/test_darabase.sqlite");
 			JOptionPane.showMessageDialog(null, "Connection succesfull to database");
 			return con;
 		
@@ -21,5 +20,9 @@ public class sqliteConnection {
 		
 		
 		
+	}
+	public static Connection setDefaultCloseOperation(int exitOnClose) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
