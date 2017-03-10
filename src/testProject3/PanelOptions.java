@@ -49,10 +49,6 @@ public class PanelOptions extends JPanel {
 		JButton btnNewButton_LabRadiologie = new JButton("LABORATOR RADIOLOGIE");
 		btnNewButton_LabRadiologie.setForeground(Color.RED);
 		btnNewButton_LabRadiologie.setFont(new Font("Arial", Font.BOLD, 14));
-
-				
-		
-
 		add(btnNewButton_LabRadiologie);
 		
 		btnNewButton_LabRadiologie.addActionListener(new ActionListener() {
@@ -60,6 +56,8 @@ public class PanelOptions extends JPanel {
 				try{
 					LaboratorRadiologie radiologie = new LaboratorRadiologie();
 					Login.frame.setContentPane(radiologie);
+					Login.frame.invalidate();
+					Login.frame.validate();
 				} catch (Exception ex){
 					JOptionPane.showMessageDialog(null, ex);
 				} 
@@ -71,6 +69,8 @@ public class PanelOptions extends JPanel {
 				try{
 					LaboratorAnalize analize = new LaboratorAnalize();
 					Login.frame.setContentPane(analize);
+					Login.frame.invalidate();
+					Login.frame.validate();
 				} catch (Exception ex){
 					JOptionPane.showMessageDialog(null, ex);
 				} 
@@ -82,6 +82,8 @@ public class PanelOptions extends JPanel {
 				try{
 					Cabinete cabinete = new Cabinete();
 					Login.frame.setContentPane(cabinete);
+					Login.frame.invalidate();
+					Login.frame.validate();
 				} catch (Exception ex){
 					JOptionPane.showMessageDialog(null, ex);
 				} 
@@ -93,6 +95,8 @@ public class PanelOptions extends JPanel {
 				try{
 					Receptie receptie = new Receptie();
 					Login.frame.setContentPane(receptie);
+					Login.frame.invalidate();
+					Login.frame.validate();
 				} catch (Exception ex){
 					JOptionPane.showMessageDialog(null, ex);
 				} 
