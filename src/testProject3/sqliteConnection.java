@@ -8,6 +8,7 @@ public class sqliteConnection {
 	public static Connection dbConnector() {
 		try {
 			Class.forName("org.sqlite.JDBC");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\StefanDomnica\\Documents\\GitHub\\testProject3\\poli.sqlite");
 			JOptionPane.showMessageDialog(null, "Connection succesfull to database");
 			return con;
 		

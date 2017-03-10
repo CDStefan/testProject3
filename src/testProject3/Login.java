@@ -93,6 +93,7 @@ public class Login {
 					}
 					if(count == 1) {
 						JOptionPane.showMessageDialog(null, "User name and password is correct");
+						panel.setVisible(false);
 						PanelOptions options = new PanelOptions();
 						frame.getContentPane().add(options, BorderLayout.CENTER);
 						options.setLayout(null);
