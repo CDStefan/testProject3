@@ -28,6 +28,7 @@ public class PanelOptions extends JPanel {
 	 * Create the panel.
 	 */
 	public PanelOptions() {
+    
 		setLayout(new GridLayout(4, 0, 0, 0));
 		
 		JButton btnNewButton_receptie = new JButton("RECEPTIE");
@@ -48,8 +49,55 @@ public class PanelOptions extends JPanel {
 		JButton btnNewButton_LabRadiologie = new JButton("LABORATOR RADIOLOGIE");
 		btnNewButton_LabRadiologie.setForeground(Color.RED);
 		btnNewButton_LabRadiologie.setFont(new Font("Arial", Font.BOLD, 14));
+
+				
+		
+
 		add(btnNewButton_LabRadiologie);
 		
+		btnNewButton_LabRadiologie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					LaboratorRadiologie radiologie = new LaboratorRadiologie();
+					Login.frame.setContentPane(radiologie);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_LabAnalize.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					LaboratorAnalize analize = new LaboratorAnalize();
+					Login.frame.setContentPane(analize);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_cabinete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					Cabinete cabinete = new Cabinete();
+					Login.frame.setContentPane(cabinete);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_receptie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					Receptie receptie = new Receptie();
+					Login.frame.setContentPane(receptie);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
 	}
 		
 		
