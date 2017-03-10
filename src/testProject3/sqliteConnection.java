@@ -9,9 +9,9 @@ public class sqliteConnection {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			//Conexiune windows
-			//Connection con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\StefanDomnica\\Documents\\GitHub\\testProject3\\poli.sqlite");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\StefanDomnica\\Documents\\GitHub\\testProject3\\poli.sqlite");
 			//Conexiune linux
-			Connection con = DriverManager.getConnection("jdbc:sqlite:/home/dom/workspace/testProject3/poli.sqlite");
+			//Connection con = DriverManager.getConnection("jdbc:sqlite:/home/dom/workspace/testProject3/poli.sqlite");
 			JOptionPane.showMessageDialog(null, "Connection succesfull to database");
 			return con;
 		
