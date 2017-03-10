@@ -18,7 +18,7 @@ import javax.swing.JButton;
 
 public class Login {
 
-	private JFrame frame;
+	public static JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -26,6 +26,7 @@ public class Login {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				
 				try {
 					Login window = new Login();
 					window.frame.setVisible(true);
@@ -77,7 +78,7 @@ public class Login {
 		panel.add(lblPassword);
 		
 		PanelOptions options = new PanelOptions();
-		
+				
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent args0) {
@@ -95,9 +96,11 @@ public class Login {
 					}
 					if(count == 1) {
 						JOptionPane.showMessageDialog(null, "User name and password is correct");
-						panel.setVisible(false);
-						frame.getContentPane().add(options, BorderLayout.CENTER);
-						options.setVisible(true);
+						
+						frame.setContentPane(options);
+						frame.invalidate();
+						frame.validate();
+
 					} else if (count < 1){
 						JOptionPane.showMessageDialog(null, "Duplicate user and password");
 					} else {

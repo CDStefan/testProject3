@@ -27,18 +27,72 @@ public class PanelOptions extends JPanel {
 	public PanelOptions() {
 		setLayout(new GridLayout(0, 4, 0, 0));
 		
-		JButton btnNewButton_3 = new JButton("New button");
-		add(btnNewButton_3);
+		JButton btnNewButton_receptie = new JButton("New button");
+		add(btnNewButton_receptie);
 		
-		JButton btnNewButton_2 = new JButton("New button");
-		add(btnNewButton_2);
+		JButton btnNewButton_cabinete = new JButton("New button");
+		add(btnNewButton_cabinete);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		add(btnNewButton_1);
+		JButton btnNewButton_LabAnalize = new JButton("New button");
+		add(btnNewButton_LabAnalize);
 		
-		JButton btnNewButton = new JButton("New button");
-		add(btnNewButton);
+		JButton btnNewButton_LabRadiologie = new JButton("New button");
+		add(btnNewButton_LabRadiologie);
 		
+		btnNewButton_LabRadiologie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					Receptie receptie = new Receptie();
+					Login.frame.setContentPane(receptie);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_LabRadiologie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					LaboratorRadiologie radiologie = new LaboratorRadiologie();
+					Login.frame.setContentPane(radiologie);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_LabAnalize.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					LaboratorAnalize analize = new LaboratorAnalize();
+					Login.frame.setContentPane(analize);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_cabinete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					Cabinete cabinete = new Cabinete();
+					Login.frame.setContentPane(cabinete);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
+		
+		btnNewButton_receptie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent args0) {
+				try{
+					Receptie receptie = new Receptie();
+					Login.frame.setContentPane(receptie);
+				} catch (Exception ex){
+					JOptionPane.showMessageDialog(null, ex);
+				} 
+			}
+		});
 	}
 		
 		
